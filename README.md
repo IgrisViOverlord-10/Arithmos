@@ -1,75 +1,74 @@
-# 🚀 Scalable Django Deployment on AWS with ALB & Auto Scaling
+# 🧮 Scalable Calculator Deployment with AWS ALB & Auto Scaling
 
-## 📌 Project Overview
-Designed and deployed a dynamic Django web application using a scalable AWS architecture with load balancing and auto scaling for high availability.
+Production-ready Django calculator web application deployed on AWS using Application Load Balancer (ALB) and Auto Scaling Group (ASG), showcasing scalable cloud architecture, load balancing, and high availability deployment practices.
 
-## ❓ Why This Approach?
-- Handles traffic efficiently using load balancing  
-- Ensures high availability with multiple EC2 instances  
-- Automatically replaces unhealthy instances  
-- Reflects real-world production deployment practices  
+---
 
-## 💻 Tech Stack
-AWS EC2, Application Load Balancer (ALB), Auto Scaling Group (ASG), Nginx, Gunicorn, Django
+## 🚀 Tech Stack
 
-## 🏗 Architecture Flow
-Client → ALB → EC2 (Auto Scaling) → Nginx → Gunicorn → Django → Response
+[![AWS](https://img.shields.io/badge/AWS-EC2-FF9900?logo=amazonaws&logoColor=white)](https://aws.amazon.com/ec2/)
+[![ALB](https://img.shields.io/badge/AWS-Application_Load_Balancer-FF9900?logo=amazonaws&logoColor=white)](https://aws.amazon.com/elasticloadbalancing/)
+[![ASG](https://img.shields.io/badge/AWS-Auto_Scaling-FF9900?logo=amazonaws&logoColor=white)](https://aws.amazon.com/autoscaling/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Gunicorn](https://img.shields.io/badge/Gunicorn-499848?logo=gunicorn&logoColor=white)](https://gunicorn.org/)
+[![Nginx](https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white)](https://nginx.org/)
 
-![Architecture Diagram](Architecture.png)
+---
 
+## 🏗 Architecture
 
-## ⚙️ Implementation Summary
-- Launched EC2 instance and deployed Django application  
-- Configured Gunicorn as application server  
-- Set up Nginx as reverse proxy  
-- Created AMI from configured instance  
-- Built Launch Template using AMI  
-- Configured Target Group with health checks  
-- Deployed Application Load Balancer  
-- Created Auto Scaling Group with multiple instances  
+```text
+Internet Client
+       │
+       ▼
+Application Load Balancer
+       │
+       ▼
+EC2 Instances (Auto Scaling Group)
+       │
+       ▼
+Nginx (Reverse Proxy)
+       │
+       ▼
+Gunicorn (WSGI Server)
+       │
+       ▼
+Django Calculator Application
+```
 
-## 🛠 Implementation Steps
-1. Launch EC2 instance and install dependencies  
-2. Deploy Django application  
-3. Configure Gunicorn and test application  
-4. Set up Nginx reverse proxy  
-5. Create AMI from configured instance  
-6. Create Launch Template using AMI  
-7. Setup Target Group and health checks  
-8. Create Application Load Balancer  
-9. Configure Auto Scaling Group  
-10. Validate traffic routing and instance health  
+---
 
-## 🔐 Security & Considerations
-- EC2 instances allow HTTP and restricted SSH access  
-- Application runs behind ALB (no direct dependency on single instance)  
-- Health checks ensure only healthy instances receive traffic  
-- Limitation: Gunicorn started manually (no process manager used)  
+## 📊 Architecture Diagram
 
-## 🚀 Key Outcomes
-- Successfully deployed a dynamic Django application on AWS  
-- Implemented load balancing across multiple instances  
-- Achieved fault tolerance using Auto Scaling Group  
-- Transitioned from static hosting to scalable architecture  
+<p align="center">
+  <img src="Architecture.png" alt="Architecture Diagram">
+</p>
 
-## 📂 Repository Files
-- calculator/ – Django app logic  
-- calculator_project/ – Project configuration  
-- templates/ – Frontend UI templates  
-- manage.py – Django entry point  
-- requirements.txt – Project dependencies  
-- Architecture.png – System architecture diagram  
-- Snapshots/ – Project setup and output screenshots  
-- Recording.mp4 – Demo video of the working application  
+---
 
-## 📸 Snapshots Include
-- Application Running via ALB  
-- Application Load Balancer Dashboard
-- Target Group Health Status
-- Auto Scaling Group Dashboard  
+## ⚙️ Deployment Highlights
 
-## 🎥 Recording
-Recording attached showcasing the Django application running via the ALB endpoint.
+- Configured scalable AWS deployment with ALB and Auto Scaling
+- Deployed Django application across multiple EC2 instances
+- Configured Nginx as reverse proxy and Gunicorn as WSGI server
+- Implemented Target Group health checks and traffic routing
+- Created reusable AMI and Launch Template for instance scaling
+- Achieved high availability and fault tolerance architecture
 
-## 💡 Conclusion
-This project demonstrates how modern applications are deployed with scalability, load balancing, and high availability using AWS services.
+---
+
+## 📸 Final Output
+
+<p align="center">
+  <img src="final-output.png" alt="Final Output">
+</p>
+
+<p align="center">
+  Screenshot above shows the Django calculator application running through the AWS Application Load Balancer endpoint.
+</p>
+
+---
+
+📌 Author: **Sai**
