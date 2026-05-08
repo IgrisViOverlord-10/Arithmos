@@ -21,7 +21,7 @@ This setup distributes incoming traffic across multiple EC2 instances and automa
 ## 🏗 Architecture Diagram
 
 <p align="center">
-  <img src="Architecture.png" alt="Architecture Diagram">
+  Architecture above illustrates a scalable AWS deployment workflow using ALB, Auto Scaling Group (ASG), Launch Templates, and multiple EC2 instances running Nginx, Gunicorn, and Django.
 </p>
 
 ---
