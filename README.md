@@ -1,6 +1,7 @@
 # 🧮 Scalable Calculator Deployment with AWS ALB & Auto Scaling
 
-Production-ready Django calculator web application deployed on AWS using Application Load Balancer (ALB) and Auto Scaling Group (ASG), showcasing scalable cloud architecture, load balancing, and high availability deployment practices.
+Scalable Django calculator web application deployed on AWS using Application Load Balancer (ALB) and Auto Scaling Group (ASG), demonstrating load balancing, high availability, and fault-tolerant cloud deployment architecture.
+This architecture helps distribute incoming traffic across multiple EC2 instances while automatically replacing unhealthy instances, ensuring improved reliability and scalability for real-world application hosting.
 
 ---
 
@@ -17,30 +18,7 @@ Production-ready Django calculator web application deployed on AWS using Applica
 
 ---
 
-## 🏗 Architecture
-
-```text
-Internet Client
-       │
-       ▼
-Application Load Balancer
-       │
-       ▼
-EC2 Instances (Auto Scaling Group)
-       │
-       ▼
-Nginx (Reverse Proxy)
-       │
-       ▼
-Gunicorn (WSGI Server)
-       │
-       ▼
-Django Calculator Application
-```
-
----
-
-## 📊 Architecture Diagram
+## 🏗 Architecture Diagram
 
 <p align="center">
   <img src="Architecture.png" alt="Architecture Diagram">
@@ -66,9 +44,7 @@ Django Calculator Application
 </p>
 
 <p align="center">
-  Screenshot above shows the Django calculator application running through the AWS Application Load Balancer endpoint.
+  Screenshot above shows the Django calculator application running through the AWS Application Load Balancer (ALB) endpoint.
 </p>
 
 ---
-
-📌 Author: **Sai**
