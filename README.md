@@ -1,4 +1,4 @@
-# 🌐 Scalable Calculator Deployment with AWS ALB & Auto Scaling
+# 🌐 Arithmos — Scalable Calculator Deployment with AWS ALB & Auto Scaling
 
 Dynamic Django calculator web application deployed on AWS using ALB and Auto Scaling, demonstrating high availability, traffic distribution, and scalable cloud deployment.
 Incoming traffic is distributed across multiple EC2 instances, while unhealthy instances are automatically replaced for improved reliability.
